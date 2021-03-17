@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -12,17 +13,11 @@ public class DController {
 
     @PostMapping(path = "/d/done")
     public Map<String, String> done(@RequestBody Map<String, String> req) {
-        Map<String, String> res = new HashMap<String, String>();
+        Map<String, String> res = new HashMap<>();
         res.put("abc", "def");
         return res;
     }
 
-
-//    @PostMapping(path = "/entrance")
-//    @ApiOperation(value = "风控实时决策入口", notes = "计算和执行风控规则")
-//    public RiskResponse entrance(@RequestBody Map<String, Object> riskRequest) {
-//        return riskEntranceService.execute(riskRequest);
-//    }
 
 
 }
